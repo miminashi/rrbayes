@@ -51,13 +51,14 @@ module Rrbayes
     end
 
     def find_categories(options)
-      categories = load_categories
-      if categories.empty?
-        categories = options[:categories]
-        raise LoadingError, "No categories specified for the classifier" unless categories
+      #categories = load_categories
+      #if categories.empty?
+      #  categories = options[:categories]
+      #  raise LoadingError, "No categories specified for the classifier" unless categories
       #elsif options[:categories] && options[:categories].sort != categories.sort
       #  raise LoadingError, "you specified categories #{options[:as].inspect} but #{categories.inspect} were found in the db"
-      end
+      #end
+      categories = options[:categories]
       categories
     end
 

@@ -55,8 +55,8 @@ module Rrbayes
       if categories.empty?
         categories = options[:categories]
         raise LoadingError, "No categories specified for the classifier" unless categories
-      elsif options[:categories] && options[:categories].sort != categories.sort
-        raise LoadingError, "you specified categories #{options[:as].inspect} but #{categories.inspect} were found in the db"
+      #elsif options[:categories] && options[:categories].sort != categories.sort
+      #  raise LoadingError, "you specified categories #{options[:as].inspect} but #{categories.inspect} were found in the db"
       end
       categories
     end

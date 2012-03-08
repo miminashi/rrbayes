@@ -40,7 +40,7 @@ module Rrbayes
     end
     
     def get_score_of_all_categories(frequency_map)
-      @categories.map { |c| {c.name => -c.attributes_score(frequency_map)} }
+      @categories.map { |c| {c.name => c.attributes_score(frequency_map)} }
     end
 
     #Returns the category objects with the name provided in the argument

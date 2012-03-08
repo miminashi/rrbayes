@@ -38,6 +38,10 @@ module Rrbayes
     def classify(frequency_map)
       @categories.sort_by { |c| -c.attributes_score(frequency_map) }.first.name
     end
+    
+    def get_score_of_all_categories(frequency_map)
+      @categories.map { |c| {c.name => -c.attributes_score(frequency_map)} }
+    end
 
     #Returns the category objects with the name provided in the argument
     def category(name)
